@@ -2,30 +2,55 @@
 
 Professional single-page site for **full-time DevOps** conversations—separate from the freelance-focused site at [afterhours-builds](https://whitedevilml.github.io/afterhours-builds/).
 
+**Repository:** [github.com/whitedevilml/portfolio](https://github.com/whitedevilml/portfolio)
+
+**Live site (after you enable Pages, Part B):** [https://whitedevilml.github.io/portfolio/](https://whitedevilml.github.io/portfolio/)
+
+---
+
+## Part A — Already done if you followed the first push
+
+From the folder that contains `index.html` (this repo root):
+
+```powershell
+git init
+git branch -M main
+git remote add origin https://github.com/whitedevilml/portfolio.git
+git add -A
+git commit -m "Initial commit: recruiter DevOps portfolio for GitHub Pages"
+git push -u origin main
+```
+
+For future edits:
+
+```powershell
+git add -A
+git commit -m "Describe your change"
+git push
+```
+
+---
+
+## Part B — Enable GitHub Pages (do this in the browser)
+
+1. Open [github.com/whitedevilml/portfolio/settings/pages](https://github.com/whitedevilml/portfolio/settings/pages).
+2. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
+3. Under **Branch**, select **`main`** and folder **`/ (root)`**, then click **Save**.
+4. Wait one to three minutes. Refresh the page until **Visit site** appears, or open [https://whitedevilml.github.io/portfolio/](https://whitedevilml.github.io/portfolio/) directly.
+5. If you see **404** at first, wait another minute and hard-refresh (`Ctrl+F5`). First deploys can be slow.
+
+Optional: on the repo main page, click **Settings** → **General** → **Features** → enable **Discussions** only if you want them (not required).
+
+---
+
 ## Before you publish
 
-1. **LinkedIn:** In `index.html`, replace the placeholder LinkedIn `href` (currently `https://www.linkedin.com/`) with your profile URL.
+1. **LinkedIn:** In `index.html`, replace `YOUR-HANDLE` in the LinkedIn URL with your public profile slug.
 2. **Email:** The page uses `lokeshmlaute@gmail.com` (from your public portfolio). Change the `mailto:` and footer if you use a different address for recruiting.
 
-## Deploy on GitHub Pages
+## Deploy notes
 
-### Option A — New repository (recommended)
-
-1. Create a new GitHub repository, for example `devops-portfolio` or `lokesh-devops`.
-2. Copy the contents of this `portfolio-site` folder to the **root** of that repository (so `index.html` is at the repo root).
-3. On GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**.
-4. Choose branch `main` and folder `/ (root)`, then save.
-5. Your site will be available at:
-
-   `https://whitedevilml.github.io/<repository-name>/`
-
-   Example: `https://whitedevilml.github.io/devops-portfolio/`
-
-6. Optional: add a custom domain later under Pages settings.
-
-### Option B — User site (only one allowed per account)
-
-If you ever use `whitedevilml.github.io` without a path, that repo must be named **`whitedevilml.github.io`**. Your existing `afterhours-builds` project uses a **project** URL, so Option A keeps this recruiter site on its own path without breaking the old one.
+This repository **is** the `portfolio` project site. Hosting steps are in **Part B** above. The site URL is `https://whitedevilml.github.io/portfolio/`. A different repo name would change only the last path segment. A **user** site (`https://whitedevilml.github.io/` with no extra path) would require a separate repository named `whitedevilml.github.io`.
 
 ## Local preview
 
@@ -49,4 +74,4 @@ Then visit the URL printed in the terminal (often `http://localhost:3000`).
 
 Use the live **GitHub Pages URL** in your email signature and LinkedIn featured section, for example:
 
-> Portfolio (DevOps): `https://whitedevilml.github.io/<your-repo-name>/`
+> Portfolio (DevOps): `https://whitedevilml.github.io/portfolio/`
